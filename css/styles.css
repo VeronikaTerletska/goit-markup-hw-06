@@ -666,9 +666,11 @@ p {
 }
 .join-soc-networks {
   display: block;
+  margin-right: 93px;
 }
 
-.soc-title {
+.soc-title,
+.footer-title {
   display: inline-block;
   margin-bottom: 20px;
   font-family: 'Roboto';
@@ -719,6 +721,42 @@ p {
 
 .join-soc-icon {
   fill: currentColor;
+}
+.signup-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+}
+.email-form {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-left: 16px;
+  margin-left: 12px;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.btn-signup {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  padding: 0;
+  width: 200px;
+  height: 50px;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
 }
 
 /* -------------------------------------------------------MODAL WINDOW------------------------------- */
