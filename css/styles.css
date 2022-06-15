@@ -746,14 +746,13 @@ p {
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
 
-  transition-property: border-color, background-color;
+  transition-property: border-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
 .email-form:focus,
 .email-form:hover {
   border-color: var(--accent-color);
-  background-color: var(--primary-background-color);
 }
 .btn-signup {
   display: flex;
@@ -859,53 +858,107 @@ p {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
 textarea {
   resize: none;
 }
 input {
   margin: 0;
 }
+.form-label {
+  margin-bottom: 4px;
+}
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+}
 
 .form-client-name {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 .modal-name-form {
   margin: 0;
+  padding-left: 42px;
+
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+.modal-name-form:focus,
+.modal-name-form:hover {
+  border-color: var(--accent-color);
+}
+.modal-name-form:focus + .icon-form,
+.modal-name-form:hover + .icon-form {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .form-client-tel {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 .modal-tel-form {
   margin: 0;
+  padding-left: 42px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+.modal-tel-form:focus + .icon-form,
+.modal-tel-form:hover + .icon-form {
+  fill: var(--accent-color);
+}
+.modal-tel-form:focus,
+.modal-tel-form:hover {
+  border-color: var(--accent-color);
 }
 
 .form-client-mail {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 .modal-mail-form {
   margin: 0;
+  padding-left: 42px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+.modal-mail-form:focus + .icon-form,
+.modal-mail-form:hover + .icon-form {
+  fill: var(--accent-color);
+}
+.modal-mail-form:focus,
+.modal-mail-form:hover {
+  border-color: var(--accent-color);
 }
 
 .form-client-msg {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .modal-msg-form {
   margin: 0;
@@ -914,6 +967,10 @@ input {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 .modal-msg-form::placeholder {
   font-size: 12px;
@@ -921,17 +978,51 @@ input {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-checkbox {
-  margin-right: 9px;
+.form-label-deal {
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
+}
+.modal-form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.icon-check {
+  display: inline-block;
   width: 15px;
   height: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 2px;
+  margin-right: 9px;
+}
+.modal-form-checkbox:checked + .icon-check {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-origin: border-box;
+}
+.form-icon-check {
+  display: inline-block;
 }
 .modal-form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0;
+  position: absolute;
+  /* bottom: 40px; */
+  left: 164px;
 
   border-radius: 4px;
   border: none;
@@ -946,7 +1037,6 @@ input {
   background-color: #188ce8;
   color: var(--white-text-color);
   cursor: pointer;
-
   transition-property: box-shadow;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
@@ -955,6 +1045,7 @@ input {
 .modal-form-btn:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+/* backdrop */
 .is-hidden {
   opacity: 0;
   pointer-events: none;
