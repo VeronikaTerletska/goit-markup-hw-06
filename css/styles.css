@@ -160,7 +160,7 @@ p {
   height: 4px;
   left: 0;
   bottom: -1px;
-  background: #2196f3;
+  background: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -269,7 +269,7 @@ p {
   height: 120px;
 
   display: block;
-  background-color: #f5f4fa;
+  background-color: var(--filter-background-color);
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -666,7 +666,7 @@ p {
 }
 .join-soc-networks {
   display: block;
-  margin-right: 93px;
+  /* margin-right: 93px; */
 }
 
 .soc-title,
@@ -724,7 +724,7 @@ p {
 }
 
 .signup-form {
-  margin: 0;
+  margin-left: auto;
 }
 .footer-form {
   display: flex;
@@ -763,7 +763,7 @@ p {
   width: 200px;
   height: 50px;
   border: none;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   border-radius: 4px;
 
   font-weight: 700;
@@ -773,13 +773,14 @@ p {
   color: var(--white-text-color);
   cursor: pointer;
 
-  transition-property: box-shadow;
+  transition-property: box-shadow, background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
 .btn-signup:focus,
 .btn-signup:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #188ce8;
 }
 .signup-icon {
   margin-left: 10px;
@@ -807,10 +808,10 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px 39px 40px 41px;
+  padding: 40px;
 
   width: 528px;
-  min-height: 581px;
+  height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -831,6 +832,8 @@ p {
   padding: 0;
 
   background-color: #ffffff;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -848,6 +851,12 @@ p {
 }
 .icon-modal-btn {
   cursor: pointer;
+}
+
+.modal-client-form {
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 .modal-title {
   margin-bottom: 12px;
@@ -867,11 +876,21 @@ input {
 }
 .form-label {
   margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--text-color);
 }
 .icon-form {
   position: absolute;
   top: 50%;
   left: 12px;
+  fill: var(--primary-text-color);
+
+  transition-property: fill;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .form-client-name {
@@ -964,7 +983,6 @@ input {
 }
 .modal-msg-form {
   margin: 0;
-  margin-bottom: 20px;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1008,17 +1026,19 @@ input {
   background-size: auto;
   background-origin: border-box;
 }
+.text-deal {
+  margin-right: 5px;
+}
+.link-deal {
+  color: var(--accent-color);
+}
 .form-icon-check {
   display: inline-block;
 }
 .modal-form-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0;
-  position: absolute;
-  /* bottom: 40px; */
-  left: 164px;
+  display: block;
+
+  margin: 0 auto;
 
   border-radius: 4px;
   border: none;
