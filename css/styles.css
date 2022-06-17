@@ -898,6 +898,10 @@ input {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 .modal-name-form {
   margin: 0;
@@ -912,14 +916,23 @@ input {
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
-.modal-name-form:focus,
-.modal-name-form:hover {
-  border-color: var(--accent-color);
+.form-client-name:focus-within .modal-name-form,
+.form-client-name:hover .modal-name-form {
+  border: 1px solid var(--accent-color);
 }
-.modal-name-form:focus + .icon-form,
-.modal-name-form:hover + .icon-form {
+.form-client-name:focus-within .icon-form,
+.form-client-name:hover .icon-form {
   fill: var(--accent-color);
 }
+
+/* .modal-name-form:focus,
+.modal-name-form:hover {
+  border-color: var(--accent-color);
+} */
+/* .modal-name-form:focus + .icon-form,
+.modal-name-form:hover + .icon-form {
+  fill: var(--accent-color);
+} */
 
 .form-client-tel {
   position: relative;
@@ -939,14 +952,22 @@ input {
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
-.modal-tel-form:focus + .icon-form,
+.form-client-tel:focus-within .modal-tel-form,
+.form-client-tel:hover .modal-tel-form {
+  border: 1px solid var(--accent-color);
+}
+.form-client-tel:focus-within .icon-form,
+.form-client-tel:hover .icon-form {
+  fill: var(--accent-color);
+}
+/* .modal-tel-form:focus + .icon-form,
 .modal-tel-form:hover + .icon-form {
   fill: var(--accent-color);
 }
 .modal-tel-form:focus,
 .modal-tel-form:hover {
   border-color: var(--accent-color);
-}
+} */
 
 .form-client-mail {
   position: relative;
@@ -966,14 +987,22 @@ input {
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
-.modal-mail-form:focus + .icon-form,
+.form-client-mail:focus-within .modal-mail-form,
+.form-client-mail:hover .modal-mail-form {
+  border: 1px solid var(--accent-color);
+}
+.form-client-mail:focus-within .icon-form,
+.form-client-mail:hover .icon-form {
+  fill: var(--accent-color);
+}
+/* .modal-mail-form:focus + .icon-form,
 .modal-mail-form:hover + .icon-form {
   fill: var(--accent-color);
 }
 .modal-mail-form:focus,
 .modal-mail-form:hover {
   border-color: var(--accent-color);
-}
+} */
 
 .form-client-msg {
   position: relative;
